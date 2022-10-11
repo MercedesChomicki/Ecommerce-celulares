@@ -25,25 +25,25 @@ class ListController {
         $this->view->showCategories();
     }
 
-    public function showCellphonesByBrand(){
-        echo "HELLO WORLD";
-        // // if (!isset($_GET['id_marca']) || empty($_GET['id_marca'])) {
-        // //     $this->view->renderError();
-        // //     return;  //die();
-        // // }
-        $brand = $_GET['id_marca'];
+
+    public function showCellphonesByBrand($id_marca){
+    
+        if (!isset($id_marca) || empty($id_marca)) {
+            $this->view->renderError();
+            return;
+        }
+        $brand = $id_marca;
         $cellphones = $this->model->getCellphonesByBrand($brand);
-        // // $this->view->renderCellphonesByBrand($cellphones);
-        $this->view->showCellphones($cellphones);
+        $this->view->showCellphonesByBrand($cellphones);
     }
 
     public function showMore($id){
-        if (!isset($_GET['id_celular']) || empty($_GET['id_celular'])) {
+        if (!isset($id) || empty($id)) {
             $this->view->renderError();
-            return;  //die();
+            return;
         }
-        $id = $_GET['id_celular'];
-        $cellphone = $this->model->getCellphone($id);
+        $id_celular = $id;
+        $cellphone = $this->model->getCellphone($id_celular);
         $this->view->showMore($cellphone);
     }
    

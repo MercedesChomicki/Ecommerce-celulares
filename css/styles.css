@@ -1,0 +1,116 @@
+.nav{
+    display: flex;
+    align-items: center;
+}
+
+.nav-logo{
+    font-family:Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+    letter-spacing: 1.5px;
+    font-size: 2rem;
+    margin-left: 2rem;
+}
+
+.nav-links{
+    color: #fff;
+    font-size: 1.1rem;
+    margin-left: 1rem;
+}
+
+.container{
+    display: flex;
+    flex-direction: column;
+}
+
+h1{
+    margin: 2rem auto;
+    font-size: 3rem;
+}
+
+.container-cards{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    align-items: center;
+}
+
+.card{
+    width: 20rem;
+    height: 30rem;
+    margin: 2rem 0;
+    padding: 0.5rem;
+    display: flex;
+    align-items: center;
+}
+
+.card:hover{
+    border: 2px solid #000;
+}
+
+.card-img-top{
+    height: 15rem;
+    width: auto;
+}
+
+.list-cellphones{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    align-items: center;
+}
+
+.list-cellphones li{
+    display:flex;
+    list-style-type: none;
+    background-color: cornflowerblue;
+    border-radius: 5%;
+    width: 18rem;
+    height: 10rem;
+    margin: 2rem 0;
+}
+
+.list-cellphones li:hover{
+    border: 2px solid #fff;
+    background-color: rgb(51, 117, 239);
+}
+.list-cellphones li a{
+    margin: auto;
+    text-decoration: none;
+    color: #fff;
+    font-size: 1.5rem;
+}
+
+/* Lista por categorias */
+
+.card-by-brand{
+    width: 16rem;
+}
+
+.volver{
+    font-size: 1.3rem;
+    margin-left: 1rem;
+}
+
+/* Descripcion celular */
+
+.task-cellphone{
+    display: flex;
+    justify-content: space-around;
+    margin: 2rem;
+}
+
+.task-cellphone__img{
+    width: 20rem;
+}
+
+.task-cellphone__byp{
+    width: 50%;
+    font-size: 1.5rem;
+    text-align: justify;
+}
+
+.task-cellphone__byp b{
+    display: block;
+    font-size: 2rem;
+    text-align: end;
+    margin-bottom: 1rem;
+}

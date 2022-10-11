@@ -1,36 +1,39 @@
 <?php
 require_once 'app/controllers/list.controller.php';
 
-//define('BASE_URL', '//'.$_SERVER['SERVER_NAME'] . ':' . $_SERVER['SERVER_PORT'] . dirname($_SERVER['PHP_SELF']).'/');
+define('BASE_URL', '//'.$_SERVER['SERVER_NAME'] . ':' . $_SERVER['SERVER_PORT'] . dirname($_SERVER['PHP_SELF']).'/');
 
-//Debe leer una acción y una lista de parámetros => :action/[:a/:b]
-//http://localhost/route.php?action=noticia/1
+$action = 'home'; 
 
-
-// leo el parametro accion
-$action = 'home'; // accion por defecto
 if (!empty($_GET['action'])) {
-    $action = $_GET['action'];  // action => about/juan
+    $action = $_GET['action']; 
 }
 
-// parsea la accion Ej: about/juan --> ['about', 'juan']
-$params = explode('/', $action); // genera un arreglo
+$params = explode('/', $action); 
 
-// instancio el unico controller que existe por ahora
 $listController = new ListController();
 
 switch ($params[0]) {
     case 'home':
         $listController->showCellphones();
         break;
-    case 'categoria':
+    case 'categorias':
         $listController->showCategories();
         break;
     case 'categoriamodelos':
-        $listController->showCellphonesByBrand();
+        if(isset($params[1])){
+            $listController->showCellphonesByBrand($params[1]);
+        } else {
+            $listController->showCellphonesByBrand(null);
+        }
         break;
-    case 'ver mas':
-        $listController->showMore($params[1]);
+    case 'vermas':
+        if(isset($params[1])){
+            $listController->showMore($params[1]);
+        } else {
+            $listController->showMore(null);
+        }
+        break;
     default:
         echo "404 not found";
         break;
