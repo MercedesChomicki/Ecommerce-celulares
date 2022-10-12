@@ -8,7 +8,7 @@
         <div class="card-body">
         <h5 class="card-title">{$cellphone->modelo}</h5>
         <b class="card-number">${$cellphone->precio}</b>
-        <p class="card-text">{$cellphone->descripcion|truncate:100}</p>
+        <p class="card-text">{$cellphone->descripcion|truncate:50}</p>
         <a href="vermas/{$cellphone->id_celular}" class="btn btn-primary">Ver mas</a>
         </div>
     </div>

@@ -27,6 +27,10 @@
                     <a class="nav-link nav-links" href="categorias">Categorias</a>
                 </li>
             </ul>
+            <div>
+                <button type="button" class="btn btn-login"><a class="nav-link nav-links" href="login">Log In</a></button>
+                <button type="button" class="btn btn-secondary"><a class="nav-link nav-links" href="signin">Sign In</a></button>
+            </div>
         </nav>
     </header>
 

@@ -20,27 +20,23 @@ class LoginController
 
     public function verifyLogin()
     {
-        //if (!empty($_POST['email']) && !empty($_POST['password'])) {
-        $email = $_POST['email'];
-        $password = $_POST['password'];
-        var_dump($password);
-        // $password = password_hash($_POST['password'], PASSWORD_BCRYPT);
+        if (!empty($_POST['email']) && !empty($_POST['password'])) {
+            $email = $_POST['email'];
+            $password = $_POST['password'];
 
-        $user = $this->model->getUserByEmail($email);
-        var_dump($user);
+            $user = $this->model->getUserByEmail($email);
 
-        // if ($user && password_verify($password, $user->password)) {
-        if ($user && $password == ($user->password)) {
-            session_start();
-            $_SESSION['IS_LOGGED'] = true;
-            $_SESSION['USER_ID'] = $user->id_usuario;
-            $_SESSION['USER_EMAIL'] = $user->email;
-          
-            $this->view->showHome();
-        } else {
-            $this->view->showLogin("El usuario o la contraseña no existe.");
+            if ($user && password_verify($password, $user->password)) {
+            
+                session_start();
+                $_SESSION['IS_LOGGED'] = true;
+                $_SESSION['USER_EMAIL'] = $user->email;
+
+                $this->view->showHome();
+            } else {
+                $this->view->showLogin("El usuario o la contraseña no existe.");
+            }
         }
-        //}
     }
 
     // public function logout()

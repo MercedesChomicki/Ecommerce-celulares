@@ -25,10 +25,13 @@ class ListController {
     }
 
     public function showCategories(){
+        $this->checkLoggedIn();
+    
         $this->view->showCategories();
     }
 
     public function showCellphonesByBrand($id_marca){
+        $this->checkLoggedIn();
     
         if (!isset($id_marca) || empty($id_marca)) {
             $this->view->renderError();
@@ -40,6 +43,7 @@ class ListController {
     }
 
     public function showMore($id){
+        $this->checkLoggedIn();
         if (!isset($id) || empty($id)) {
             $this->view->renderError();
             return;
@@ -52,7 +56,7 @@ class ListController {
     public function checkLoggedIn(){
         session_start();
         if(!isset( $_SESSION['IS_LOGGED'])){
-            header("Location: " . BASE_URL . 'login');
+            $this->view->showLoginLocation();
         }
     }
     

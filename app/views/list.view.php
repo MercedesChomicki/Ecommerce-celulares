@@ -6,7 +6,11 @@ class ListView
     private $smarty;
 
     public function __construct() {
-        $this->smarty = new Smarty(); // inicializo Smarty
+        $this->smarty = new Smarty();
+    }
+
+    function showLoginLocation(){
+        header("Location: " . BASE_URL . 'login');
     }
 
     function showCellphones($cellphones)

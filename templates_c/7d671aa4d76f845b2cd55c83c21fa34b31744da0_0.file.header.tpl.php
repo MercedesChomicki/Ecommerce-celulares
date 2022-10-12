@@ -1,18 +1,18 @@
 <?php
-/* Smarty version 4.2.1, created on 2022-10-12 05:43:50
+/* Smarty version 4.2.1, created on 2022-10-12 20:15:43
   from 'C:\xampp\htdocs\WEB2\TPE-WEB2\templates\header.tpl' */
 
 /* @var Smarty_Internal_Template $_smarty_tpl */
 if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   'version' => '4.2.1',
-  'unifunc' => 'content_634637f6cb16f4_22862841',
+  'unifunc' => 'content_6347044fbc1071_67775936',
   'has_nocache_code' => false,
   'file_dependency' => 
   array (
     '7d671aa4d76f845b2cd55c83c21fa34b31744da0' => 
     array (
       0 => 'C:\\xampp\\htdocs\\WEB2\\TPE-WEB2\\templates\\header.tpl',
-      1 => 1665546120,
+      1 => 1665598528,
       2 => 'file',
     ),
   ),
@@ -20,7 +20,7 @@ if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   array (
   ),
 ),false)) {
-function content_634637f6cb16f4_22862841 (Smarty_Internal_Template $_smarty_tpl) {
+function content_6347044fbc1071_67775936 (Smarty_Internal_Template $_smarty_tpl) {
 ?><!DOCTYPE html>
 <html lang="en">
 
@@ -51,6 +51,10 @@ function content_634637f6cb16f4_22862841 (Smarty_Internal_Template $_smarty_tpl)
                     <a class="nav-link nav-links" href="categorias">Categorias</a>
                 </li>
             </ul>
+            <div>
+                <button type="button" class="btn btn-login"><a class="nav-link nav-links" href="login">Log In</a></button>
+                <button type="button" class="btn btn-secondary"><a class="nav-link nav-links" href="signin">Sign In</a></button>
+            </div>
         </nav>
     </header>
 
