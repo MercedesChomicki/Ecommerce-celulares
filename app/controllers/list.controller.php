@@ -17,6 +17,9 @@ class ListController {
     }
 
     public function showCellphones() {
+
+        $this->checkLoggedIn();
+
         $cellphones = $this->model->getAllCellphones();
         $this->view->showCellphones($cellphones);
     }
@@ -24,7 +27,6 @@ class ListController {
     public function showCategories(){
         $this->view->showCategories();
     }
-
 
     public function showCellphonesByBrand($id_marca){
     
@@ -47,7 +49,12 @@ class ListController {
         $this->view->showMore($cellphone);
     }
    
-
+    public function checkLoggedIn(){
+        session_start();
+        if(!isset( $_SESSION['IS_LOGGED'])){
+            header("Location: " . BASE_URL . 'login');
+        }
+    }
     
     // function addCellphone() {
     //     // TODO: validar entrada de datos
