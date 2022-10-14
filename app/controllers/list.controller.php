@@ -1,37 +1,34 @@
 <?php
 require_once './app/models/list.model.php';
 require_once './app/views/list.view.php';
-//require_once './app/helpers/auth.helper.php';
+require_once './app/helpers/AuthHelper.php';
 
 class ListController {
     private $model;
     private $view;
+    private $authHelper;
 
     public function __construct() {
         $this->model = new ListModel();
         $this->view = new ListView();
-
-        // barrera de seguridad
-        //$authHelper = new AuthHelper();
-        //$authHelper->checkLoggedIn();
+        $this->authHelper = new AuthHelper();
     }
 
     public function showCellphones() {
 
-        $this->checkLoggedIn();
-
+        $this->authHelper->checkLoggedIn();
+        
         $cellphones = $this->model->getAllCellphones();
         $this->view->showCellphones($cellphones);
     }
 
     public function showCategories(){
-        $this->checkLoggedIn();
-    
+        $this->authHelper->checkLoggedIn();    
         $this->view->showCategories();
     }
 
     public function showCellphonesByBrand($id_marca){
-        $this->checkLoggedIn();
+        $this->authHelper->checkLoggedIn();
     
         if (!isset($id_marca) || empty($id_marca)) {
             $this->view->renderError();
@@ -43,7 +40,7 @@ class ListController {
     }
 
     public function showMore($id){
-        $this->checkLoggedIn();
+        $this->authHelper->checkLoggedIn();
         if (!isset($id) || empty($id)) {
             $this->view->renderError();
             return;
@@ -53,12 +50,7 @@ class ListController {
         $this->view->showMore($cellphone);
     }
    
-    public function checkLoggedIn(){
-        session_start();
-        if(!isset( $_SESSION['IS_LOGGED'])){
-            $this->view->showLoginLocation();
-        }
-    }
+ 
     
     // function addCellphone() {
     //     // TODO: validar entrada de datos
