@@ -21,9 +21,9 @@ switch ($params[0]) {
     case 'login':
         $loginController->login();
         break;
-        // case 'logout':
-        //     $loginController->logout();
-        //     break;
+    case 'logout':
+        $loginController->logout();
+        break;
     case 'verify':
         $loginController->verifyLogin();
         break;

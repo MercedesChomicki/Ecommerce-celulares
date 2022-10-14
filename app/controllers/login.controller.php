@@ -39,10 +39,10 @@ class LoginController
         }
     }
 
-    // public function logout()
-    // {
-    //     session_start();
-    //     session_destroy();
-    //     $this->view->showLogin("Te deslogueaste");
-    // }
+    public function logout()
+    {
+        session_start();
+        session_destroy();
+        $this->view->showLogin("Te deslogueaste");
+    }
 }
