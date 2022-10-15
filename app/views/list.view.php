@@ -13,28 +13,23 @@ class ListView
         header("Location: " . BASE_URL . 'login');
     }
 
-    function showCellphones($cellphones)
+    function showCellphones($cellphones, $logged)
     {
         $this->smarty->assign('cellphones', $cellphones);
+        $this->smarty->assign('logged', $logged);
         $this->smarty->assign('titulo', 'Lista de productos');
+        $this->smarty->assign('tituloForm', 'Agregar celular');
         $this->smarty->display('templates/list.tpl');
-    }
-
-    function showCellphonesByBrand($cellphones)
-    {
-        $this->smarty->assign('cellphones', $cellphones);
-        $this->smarty->assign('titulo', 'Lista de productos');
-        $this->smarty->display('templates/listByBrand.tpl');
-    }
-
-    function showCategories(){
-        $this->smarty->display('templates/categories.tpl');
     }
 
     function showMore($cellphone)
     {
         $this->smarty->assign('cellphone', $cellphone);
         $this->smarty->display('templates/cellphone.tpl');
+    }
+
+    function showForm() {
+        $this->smarty->display('templates/form_alta.tpl');
     }
 
     function renderError()

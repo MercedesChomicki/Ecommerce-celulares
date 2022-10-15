@@ -18,5 +18,10 @@ class LoginView {
         header("Location: " . BASE_URL . "home");
     }
 
+    function showTasks(){
+        $this->smarty->assign('titulo', 'Agregar Celular');
+        $this->smarty->display('templates/form_alta.tpl');
+    }
+
 
 }

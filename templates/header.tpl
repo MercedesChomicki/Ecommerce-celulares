@@ -15,7 +15,7 @@
 <body>
 
     <header>
-        <nav class="navbar navbar-expand-lg navbar-dark bg-primary">
+        <nav class="navbar navbar-expand-lg">    {*navbar-dark bg-primary*}
             <ul class="nav navbar-nav">
                 <li class="nav-item active" aria-current="page">
                     <a class="nav-link nav-logo" href="home">Cellshop</a>
@@ -28,8 +28,7 @@
                 </li>
             </ul>
             <div>
-                <button type="button" class="btn btn-login"><a class="nav-link nav-links" href="login">Log In</a></button>
-                <button type="button" class="btn btn-secondary"><a class="nav-link nav-links" href="signin">Sign In</a></button>
+                <button type="button" class="btn btn-primary"><a class="nav-link nav-links" href="login">Log In</a></button>
             </div>
         </nav>
     </header>

@@ -36,12 +36,13 @@ class ListModel {
     // /**
     //  * Inserta una tarea en la base de datos.
     //  */
-    // public function insertCellphone($model, $price, $description, $brand) {
-    //     $query = $this->db->prepare("INSERT INTO task (titulo, precio, descripcion, ) VALUES (?, ?, ?, ?)");
-    //     $query->execute([$model, $price, $description]);
+    public function insertCellphone($model, $price, $description, $id_brand) {
+      
+        $query = $this->db->prepare("INSERT INTO celular (modelo, precio, descripcion, id_marca) VALUES (?, ?, ?, ?)");
+        $query->execute([$model, $price, $description, $id_brand]);
 
-    //     return $this->db->lastInsertId();
-    // }
+        return $this->db->lastInsertId();
+    }
 
 
     // /**

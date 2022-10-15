@@ -29,7 +29,7 @@ class LoginController
             if ($user && password_verify($password, $user->password)) {
             
                 session_start();
-                $_SESSION['IS_LOGGED'] = true;
+                $_SESSION['IS_LOGGED'] = 1;
                 $_SESSION['USER_EMAIL'] = $user->email;
 
                 $this->view->showHome();
