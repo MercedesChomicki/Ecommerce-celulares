@@ -50,6 +50,14 @@ switch ($params[0]) {
     case 'add':
         $listController->addCellphone();
         break;
+    case 'delete':
+        $listController->deleteCellphone($params[1]);
+        break;
+    case 'update':
+        $listController->updateCellphone($params[1]);
+        break;
+    case 'confirmUpdate':
+        $listController->confirmUpdateCellphone($params[1]);
     default:
         echo "404 not found";
         break;

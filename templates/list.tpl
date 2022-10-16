@@ -17,6 +17,10 @@
                     <b class="card-number">${$cellphone->precio}</b>
                     <p class="card-text">{$cellphone->descripcion|truncate:50}</p>
                     <a href="vermas/{$cellphone->id_celular}" class="btn btn-primary">Ver mas</a>
+                    {if $logged}
+                        <a href="delete/{$cellphone->id_celular}" type="button" class="btn btn-danger">Eliminar</a>
+                        <a href="update/{$cellphone->id_celular}" type="button" class="btn btn-warning">Editar</a>
+                    {/if}
                 </div>
             </div>
 

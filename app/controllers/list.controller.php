@@ -34,10 +34,6 @@ class ListController
         $this->view->showMore($cellphone);
     }
 
-    function showTasks() {
-        $this->view->showForm();
-    }
-
     function addCellphone()
     {
         if (!empty($_POST['title']) && !empty($_POST['price']) && !empty($_POST['description']) && !empty($_POST['id_marca'])) {
@@ -52,15 +48,35 @@ class ListController
         }
     }
 
-    // function deleteTask($id) {
-    //     $this->model->deleteTaskById($id);
-    //     header("Location: " . BASE_URL);
-    // }
+    function deleteCellphone($id) {
+        $this->model->deleteCellphoneById($id);
+        header("Location: " . BASE_URL);
+    }
 
-    // function finalizeTask($id) {
-    //     $this->model->finalize($id);
-    //     header("Location: " . BASE_URL); 
-    // }
+    function updateCellphone($id) {
+        if (!isset($id) || empty($id)) {
+            $this->view->renderError();
+            return;
+        }
+        $id_celular = $id;
+        $cellphone = $this->model->getCellphone($id_celular);
+        $this->view->formUpdateCellphone($cellphone);
+        // header("Location: " . BASE_URL); 
+    }
+
+    public function confirmUpdateCellphone($id) {
+
+        if (!empty($_POST['title']) && !empty($_POST['price']) && !empty($_POST['description']) && !empty($_POST['id_marca'])) {
+            $model = $_POST['title'];
+            $price = $_POST['price'];
+            $description = $_POST['description'];
+            $id_brand = $_POST['id_marca'];
+
+            $this->model->updateCellphone($id, $model, $price, $description, $id_brand);       
+
+            header("Location: " . BASE_URL); 
+        }
+      }
 
 
 }

@@ -32,6 +32,11 @@ class ListView
         $this->smarty->display('templates/form_alta.tpl');
     }
 
+    function formUpdateCellphone($cellphone){
+        $this->smarty->assign('cellphone', $cellphone);
+        $this->smarty->display('templates/form_update.tpl');
+    }
+
     function renderError()
     {
         echo "<h2>Error! Marca no especificada.</h2>";

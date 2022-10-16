@@ -1,5 +1,4 @@
-
-<form action="add" method="POST" class="my-4">
+<form action="add" method="POST" enctype="multipart/form-data" class="my-4">
     <div class="row">
         <div class="col-9">
             <div class="form-group">
@@ -33,6 +32,12 @@
                 </select>
             </div>
         </div>
+        {* <div class="col-3">
+            <div class="form-group">
+                <label>Imagen</label>
+                <input name="img" type="file" class="form-control" id="imageToUpload" >
+            </div>
+        </div> *}
     </div>
 
     <button type="submit" class="btn btn-primary mt-2">Guardar</button>
