@@ -1,152 +1,168 @@
-.nav{
-    display: flex;
-    align-items: center;
+.nav {
+  display: flex;
+  align-items: center;
 }
 
-.nav-logo{
-    font-family:Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
-    letter-spacing: 1.5px;
-    font-size: 2.3rem;
-    color: rgb(244, 100, 124);
+.nav-logo {
+  font-family: Impact, Haettenschweiler, "Arial Narrow Bold", sans-serif;
+  letter-spacing: 1.5px;
+  font-size: 2.3rem;
+  color: rgb(244, 100, 124);
 }
-.nav-logo:hover{
-    color:rgb(84, 84, 255);
-}
-
-.nav-links{
-    color: #000;
-    font-size: 1.3rem;
-    font-weight: 600;
+.nav-logo:hover {
+  color: rgb(84, 84, 255);
 }
 
-.navbar{
-    display: flex;
-    justify-content: space-between;
-    padding: 0 2em;
+.nav-links {
+  color: #000;
+  font-size: 1.3rem;
+  font-weight: 600;
 }
 
-.btn a{
-    color: #fff;
-    font-size: 1rem;
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  padding: 0 2em;
 }
 
-.container{
-    display: flex;
-    flex-direction: column;
+.btn a {
+  color: #fff;
+  font-size: 1rem;
 }
 
-h1{
-    margin: 2rem auto;
-    font-size: 3rem;
+.container {
+  display: flex;
+  flex-direction: column;
 }
 
-.container-cards{
-    display: flex;
-    flex-wrap: wrap;
-    align-items: center;
+h1 {
+  margin: 2rem auto;
+  font-size: 3rem;
 }
 
-.card{
-    width: 16rem;
-    height: 30rem;
-    margin: 2rem 0.5rem;
-    padding: 0.5rem;
-    display: flex;
-    align-items: center;
+.container-cards {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
 }
 
-.card:hover{
-    border: 2px solid #000;
+.card {
+  width: 16rem;
+  height: 30rem;
+  margin: 2rem 0.5rem;
+  padding: 0.5rem;
+  display: flex;
+  align-items: center;
 }
 
-.card-img-top{
-    height: 15rem;
-    width: auto;
+.card:hover {
+  border: 2px solid #000;
 }
 
-.list-cellphones{
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: space-around;
-    align-items: center;
+.bigCard {
+  height: 34rem;
 }
 
-.list-cellphones li{
-    display:flex;
-    list-style-type: none;
-    background-color: cornflowerblue;
-    border-radius: 5%;
-    width: 18rem;
-    height: 10rem;
-    margin: 2rem 0;
+.btn-warning {
+  margin-top: 0.2rem;
+  color: #fff;
 }
 
-.list-cellphones li:hover{
-    border: 2px solid #fff;
-    background-color: rgb(51, 117, 239);
+.card-img-top {
+  height: 15rem;
+  width: auto;
+  max-width: 16rem;
 }
-.list-cellphones li a{
-    margin: auto;
-    text-decoration: none;
-    color: #fff;
-    font-size: 1.5rem;
+
+.list-categories {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  align-items: center;
+}
+
+.list-categories li {
+  display: flex;
+  list-style-type: none;
+  background: linear-gradient(
+    150deg,
+    rgba(255, 118, 203, 0.83) 0%,
+    rgba(255, 40, 255, 0.936) 35%,
+    rgb(163, 79, 254) 69%,
+    rgba(53, 60, 255, 0.927) 100%
+  );
+  border-radius: 5%;
+  width: 18rem;
+  height: 10rem;
+  margin: 2rem 0;
+}
+
+.list-categories li:hover {
+  border: 2px solid #fff;
+  background-color: rgb(51, 117, 239);
+}
+.list-categories li a {
+  margin: auto;
+  text-decoration: none;
+  color: #fff;
+  font-size: 1.5rem;
 }
 
 /* Lista por categorias */
 
-.card-by-brand{
-    width: 16rem;
+.card-by-brand {
+  width: 16rem;
 }
 
-.volver{
-    font-size: 1.3rem;
-    margin-left: 1rem;
+.volver {
+  font-size: 1.3rem;
+  margin-left: 1rem;
 }
 
 /* Descripcion celular */
 
-.task-cellphone{
-    display: flex;
-    justify-content: space-around;
-    margin: 2rem;
+.task-cellphone {
+  display: flex;
+  justify-content: space-around;
+  margin: 2rem;
 }
 
-.task-cellphone__img{
-    width: 20rem;
+.task-cellphone__img {
+  width: 20rem;
 }
 
-.task-cellphone__byp{
-    width: 50%;
-    font-size: 1.5rem;
-    text-align: justify;
+.task-cellphone__byp {
+  width: 50%;
+  font-size: 1.5rem;
+  text-align: justify;
 }
 
-.task-cellphone__byp b{
-    display: block;
-    font-size: 2rem;
-    text-align: end;
-    margin-bottom: 1rem;
+.task-cellphone__byp b {
+  display: block;
+  font-size: 2rem;
+  text-align: end;
+  margin-bottom: 1rem;
 }
 
 /* HOME */
-.indexHome{
-    padding-top: 0.7rem;
-    display:flex;
-    list-style-type: none;
-    border-top: 2px solid #000;
+.indexHome {
+  padding-top: 0.7rem;
+  display: flex;
+  list-style-type: none;
+  border-top: 2px solid #000;
 }
 
-.indexHome li a{
-    text-decoration: none;
-    color: #fff;
-    text-align: center;
-    padding: 0.7rem;
-    background-color: rgb(244, 100, 124);
-    margin-right: 1rem;
-    font-weight: 400;
+.indexHome li a {
+  text-decoration: none;
+  color: #fff;
+  text-align: center;
+  padding: 0.7rem;
+  background-color: rgb(244, 100, 124);
+  margin-right: 1rem;
+  font-weight: 400;
 }
 
-.indexHome li a:hover{
-    /* background-color: rgb(194, 244, 100); */
-    background-color: rgb(84, 84, 255);
+.indexHome li a:hover {
+  /* background-color: rgb(194, 244, 100); */
+  background-color: rgb(84, 84, 255);
 }

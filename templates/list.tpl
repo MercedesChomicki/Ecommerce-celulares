@@ -10,7 +10,7 @@
     <div class="container-cards">
         {foreach from=$cellphones item=$cellphone}
 
-            <div class="card">
+        <div class="card {if $logged} bigCard {/if}">
                 <img src="{$cellphone->Imagen}" class="card-img-top rounded" alt="Celular modelo {$cellphone->modelo}">
                 <div class="card-body">
                     <h5 class="card-title">{$cellphone->modelo}</h5>

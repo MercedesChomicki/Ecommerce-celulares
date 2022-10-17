@@ -1,7 +1,7 @@
 {include file="header.tpl"}
 <div class="container">
 <h1>Celulares por Marca</h1>
-<ul class="list-cellphones">
+<ul class="list-categories">
     <li><a href="categoriamodelos/1">Samsung</a></li>
     <li><a href="categoriamodelos/2">Apple</a></li>
     <li><a href="categoriamodelos/3">Motorola</a></li>

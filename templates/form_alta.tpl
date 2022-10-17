@@ -32,12 +32,12 @@
                 </select>
             </div>
         </div>
-        {* <div class="col-3">
+        <div class="col-3">
             <div class="form-group">
                 <label>Imagen</label>
-                <input name="img" type="file" class="form-control" id="imageToUpload" >
+                <input name="img" type="file" class="form-control" id="imageToUpload" />
             </div>
-        </div> *}
+        </div>
     </div>
 
     <button type="submit" class="btn btn-primary mt-2">Guardar</button>

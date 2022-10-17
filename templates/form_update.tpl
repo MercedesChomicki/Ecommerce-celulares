@@ -4,26 +4,26 @@
         <div class="col-9">
             <div class="form-group">
                 <label>Modelo</label>
-                <input name="title" type="text" class="form-control" >
+                <input name="title" type="text" class="form-control" value="{$cellphone->modelo}" required>
             </div>
         </div>
 
         <div class="col-3">
             <div class="form-group">
                 <label>Precio</label>
-                <input name="price" type="number" class="form-control" > 
+                <input name="price" type="number" class="form-control" value="{$cellphone->precio}" required> 
             </div>
         </div>
 
         <div class="form-group">
             <label>Descripcion</label>
-            <textarea name="description" class="form-control" rows="3">{$cellphone->descripcion}</textarea>
+            <textarea name="description" class="form-control" rows="3" required>{$cellphone->descripcion}</textarea>
         </div>
 
         <div class="col-3">
             <div class="form-group">
                 <label>Marca</label>
-                <select name="id_marca" class="form-control">
+                <select name="id_marca" class="form-control" required>
                     <option value="1">Samsung</option>
                     <option value="2">Apple</option>
                     <option value="3">Motorola</option>
@@ -33,12 +33,12 @@
                 </select>
             </div>
         </div>
-        {* <div class="col-3">
+        <div class="col-3">
             <div class="form-group">
                 <label>Imagen</label>
-                <input name="img" type="file" class="form-control" id="imageToUpload" >
+                <input name="img" type="file" class="form-control" id="imageToUpload" />
             </div>
-        </div> *}
+        </div>
     </div>
 
     <button type="submit" class="btn btn-primary mt-2">Guardar</button>

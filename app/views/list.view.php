@@ -9,6 +9,10 @@ class ListView
         $this->smarty = new Smarty();
     }
 
+    function showHomeLocation(){
+        header("Location: " . BASE_URL);
+    }
+
     function showLoginLocation(){
         header("Location: " . BASE_URL . 'login');
     }
