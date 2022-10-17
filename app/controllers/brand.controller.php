@@ -32,14 +32,14 @@ class BrandController
         $this->view->showCellphonesByBrand($cellphones, $logged);
     }
 
-    function addCategory()
+    function addBrand()
     {
         $this->authHelper->checkLoggedIn();
 
         if (isset($_POST['name']) && !empty($_POST['name'])) {
             $name = $_POST['name'];
 
-            $this->model->addCategory($name);
+            $this->model->addBrand($name);
 
             $this->view->showCategoriesLocation();
         } else {
@@ -56,7 +56,6 @@ class BrandController
 
     public function updateBrand($id)
     {
-
         $logged = $this->authHelper->isLogged();
         $brand = $this->model->getBrand($id);
         $this->view->formUpdateBrand($brand, $logged);

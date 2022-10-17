@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Servidor: 127.0.0.1
--- Tiempo de generación: 11-10-2022 a las 06:15:57
+-- Tiempo de generación: 18-10-2022 a las 00:35:27
 -- Versión del servidor: 10.4.24-MariaDB
 -- Versión de PHP: 8.1.6
 
@@ -52,7 +52,11 @@ INSERT INTO `celular` (`id_celular`, `modelo`, `precio`, `descripcion`, `id_marc
 (9, 'Xiaomi Mi 12 Pro 256/ 12 Gb RAM', 413895, 'Pantalla LTPO AMOLED de 6.73 pulgadas a resolución 1440p y tasa de refresco de 120Hz. Procesador Snapdragon 8 Gen 1 de Qualcomm. 8GB o 12GB de RAM y 128GB o 256GB de almacenamiento interno no expandible. Camaras traseras de 50MP, wide, ultrawide y telefoto, respectivamente, y cámara selfie de 32MP. Batería de 4600 mAh de carga rápida de 120W y compatible con carga inalámbrica. Otras caracteristicas: parlantes stereo optimizados por Harman Kardon, lector de huellas bajo la pantalla, y MIUI 13 basado en Android 12.', 4, 'https://specs-tech.com/wp-content/uploads/2021/10/Xiaomi-12-Pro-1.jpg'),
 (10, 'LG Velvet 128 GB aurora gray 6 GB RAM', 237599, 'Dispositivo liberado.\r\nPantalla POLED de 6.8\".\r\nTiene 3 cámaras traseras de 48Mpx/8Mpx/5Mpx.\r\nCámara delantera de 16Mpx.\r\nProcesador Snapdragon 845 Octa-Core de 2.8GHz con 6GB de RAM.\r\nBatería de 4300mAh con carga inalámbrica.\r\nMemoria interna de 128GB.\r\nResistente al agua.\r\nCon sensor de huella dactilar.\r\nResistente al polvo', 5, 'https://http2.mlstatic.com/D_NQ_NP_733607-MLA44346739897_122020-O.jpg'),
 (11, 'Huawei Mate 30 Pro 256 GB púrpura cósmico 8 GB RAM', 474049, 'Dispositivo liberado.\r\nPantalla OLED de 6.53\".\r\nTiene 4 cámaras traseras de 40Mpx/40Mpx/8Mpx/2Mpx.\r\nCámaras delanteras de 32Mpx.\r\nProcesador HiSilicon Kirin 990 Octa-Core de 2.86GHz con 8GB de RAM.\r\nBatería de 4500mAh.\r\nMemoria interna de 256GB.\r\nResistente al agua.\r\nCon reconocimiento facial y sensor de huella dactilar.', 6, 'https://http2.mlstatic.com/D_NQ_NP_698931-MLM50166478865_062022-O.webp'),
-(12, 'Huawei P30 Pro 256 GB black 8 GB RAM', 427000, 'Dispositivo liberado.\r\nPantalla OLED de 6.47\".\r\nTiene 4 cámaras traseras de 40Mpx/20Mpx/8Mpx.\r\nCámara delantera de 32Mpx.\r\nProcesador HiSilicon Kirin 980 Octa-Core de 2.6GHz con 8GB de RAM.\r\nBatería de 4200mAh.\r\nMemoria interna de 256GB.\r\nResistente al agua.\r\nCon reconocimiento facial y sensor de huella dactilar.', 6, 'https://http2.mlstatic.com/D_NQ_NP_997622-MLA33085312922_122019-O.jpg');
+(12, 'Huawei P30 Pro 256 GB black 8 GB RAM', 427000, 'Dispositivo liberado.\r\nPantalla OLED de 6.47\".\r\nTiene 4 cámaras traseras de 40Mpx/20Mpx/8Mpx.\r\nCámara delantera de 32Mpx.\r\nProcesador HiSilicon Kirin 980 Octa-Core de 2.6GHz con 8GB de RAM.\r\nBatería de 4200mAh.\r\nMemoria interna de 256GB.\r\nResistente al agua.\r\nCon reconocimiento facial y sensor de huella dactilar.', 6, 'https://http2.mlstatic.com/D_NQ_NP_997622-MLA33085312922_122019-O.jpg'),
+(15, 'Huawei Mate 20 Pro Dual Sim 128 Gb Azul Cometa 6 Gb Ram', 300000, 'Dispositivo liberado para que elijas la compañía telefónica que prefieras.\nPantalla OLED de 6.39\".\nTiene 3 cámaras traseras de 40Mpx/20Mpx/8Mpx.\nCámara delantera de 24Mpx.\nProcesador HiSilicon Kirin 980 Octa-Core de 2.6GHz con 6GB de RAM.\nBatería de 4200mAh.\nMemoria interna de 128GB.\nResistente al agua.\nCon reconocimiento facial y sensor de huella dactilar.', 6, 'https://http2.mlstatic.com/D_NQ_NP_683222-MLA33084588978_122019-O.jpg'),
+(20, 'Xiaomi 11t Pro 8gb Ram 256gb Ram', 380000, 'En este Xiaomi 11T vemos un panel AMOLED de 6,67 pulgadas con tasa de refresco de 120 Hz y muestreo táctil de hasta 480 Hz. Aspectos que, junto a la resolución FullHD+ de 2.400x1.080 píxeles, vienen a ser los mínimos esperados en un móvil de gama alta no ambicioso en pantalla.', 4, 'images/634d9525d92fc3.67188508.jpg'),
+(22, 'Xiaomi Blackshark 5 12 256 Celular Smartphone Gaming Gamer', 400000, 'El Black Shark 5 es el más \"básico\", el RS aumenta en potencia y la variante Pro apuesta por el mejor procesador de Qualcomm y por un sistema de cámaras de 108 megapíxeles.', 4, 'images/634d626c474575.96360022.jpg'),
+(23, 'LG V40 Thinq 64gb 6gb Ram Octa-core', 90000, 'El LG V40 ThinQ está potenciado por un procesador Snapdragon 845 con 6GB de RAM y 64GB ó 128GB de almacenamiento. Sus cámaras traseras son de 16MP, 12MP y 12MP, con disparos gran ángulo, convencional y telefoto respectivamente.', 5, 'images/634d701248a4e2.53687138.jpg');
 
 -- --------------------------------------------------------
 
@@ -77,6 +81,24 @@ INSERT INTO `marca` (`id_marca`, `nombre`) VALUES
 (5, 'LG'),
 (6, 'Huawei');
 
+-- --------------------------------------------------------
+
+--
+-- Estructura de tabla para la tabla `usuario`
+--
+
+CREATE TABLE `usuario` (
+  `email` varchar(100) NOT NULL,
+  `password` varchar(255) NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
+
+--
+-- Volcado de datos para la tabla `usuario`
+--
+
+INSERT INTO `usuario` (`email`, `password`) VALUES
+('admin@gmail.com', '$2y$10$gmO7oAd3srIV6yx7noavSOIHIkyvyTkYES.MqAySM/FNcY8.1HNIK');
+
 --
 -- Índices para tablas volcadas
 --
@@ -95,6 +117,12 @@ ALTER TABLE `marca`
   ADD PRIMARY KEY (`id_marca`);
 
 --
+-- Indices de la tabla `usuario`
+--
+ALTER TABLE `usuario`
+  ADD PRIMARY KEY (`email`);
+
+--
 -- AUTO_INCREMENT de las tablas volcadas
 --
 
@@ -102,13 +130,13 @@ ALTER TABLE `marca`
 -- AUTO_INCREMENT de la tabla `celular`
 --
 ALTER TABLE `celular`
-  MODIFY `id_celular` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=15;
+  MODIFY `id_celular` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=44;
 
 --
 -- AUTO_INCREMENT de la tabla `marca`
 --
 ALTER TABLE `marca`
-  MODIFY `id_marca` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=8;
+  MODIFY `id_marca` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=14;
 
 --
 -- Restricciones para tablas volcadas

@@ -34,7 +34,7 @@ class ListView
         $this->smarty->assign('cellphone', $cellphone);
         $this->smarty->assign('logged', $logged);
         $this->smarty->assign('brands', $brands);
-        $this->smarty->display('templates/form_update.tpl');
+        $this->smarty->display('templates/form_updateCellphone.tpl');
     }
 
     function showErrorForm() {

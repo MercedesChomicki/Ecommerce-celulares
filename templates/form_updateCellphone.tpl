@@ -1,5 +1,5 @@
 {include file="header.tpl"}
-<form action="confirmUpdate/{$cellphone->id_celular}" method="POST" enctype="multipart/form-data" class="my-4">
+<form action="confirmUpdateCellphone/{$cellphone->id_celular}" method="POST" enctype="multipart/form-data" class="my-4">
     <div class="row">
         <div class="col-9">
             <div class="form-group">

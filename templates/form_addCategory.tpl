@@ -1,4 +1,4 @@
-<form action="addCategory" method="POST" class="my-4">
+<form action="addBrand" method="POST" class="my-4">
     <div class="row">
         <div class="col-9">
             <div class="form-group">

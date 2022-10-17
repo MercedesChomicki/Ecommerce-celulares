@@ -27,8 +27,7 @@ class ListController
     public function showMore($id = null)
     {
         $logged = $this->authHelper->isLogged();
-        $id_celular = $id;
-        $cellphone = $this->model->getCellphone($id_celular);
+        $cellphone = $this->model->getCellphone($id);
         $this->view->showMore($cellphone, $logged);
     }
 
@@ -54,13 +53,12 @@ class ListController
 
             if (isset($image) && $image != "") {
                 $type = $_FILES['img']['type'];
-                $size = $_FILES['img']['size'];
                 $fileTemp = $_FILES['img']['tmp_name'];
 
                 if (isset($id) && $id != "") {
-                    $this->confirmUpdateCellphone($id, $type, $size, $model, $price, $description, $id_brand, $image, $fileTemp);
+                    $this->confirmUpdateCellphone($id, $type, $model, $price, $description, $id_brand, $image, $fileTemp);
                 } else {
-                    $this->addCellphone($type, $size, $model, $price, $description, $id_brand, $image, $fileTemp);
+                    $this->addCellphone($type, $model, $price, $description, $id_brand, $image, $fileTemp);
                 }
             }
 
@@ -70,18 +68,18 @@ class ListController
         }
     }
 
-    function addCellphone($type, $size, $model, $price, $description, $id_brand, $image, $fileTemp)
+    function addCellphone($type, $model, $price, $description, $id_brand, $image, $fileTemp)
     {
-        if ((strpos($type, "jpeg") || strpos($type, "jpg") || strpos($type, "png")) && ($size < 2000000)) {
+        if ((strpos($type, "jpeg") || strpos($type, "jpg") || strpos($type, "png"))) {
             $this->model->insertCellphone($model, $price, $description, $id_brand, $image, $fileTemp);
         } else {
             $this->model->insertCellphone($model, $price, $description, $id_brand);
         }
     }
 
-    public function confirmUpdateCellphone($id, $type, $size, $model, $price, $description, $id_brand, $image, $fileTemp)
+    public function confirmUpdateCellphone($id, $type, $model, $price, $description, $id_brand, $image, $fileTemp)
     {
-        if ((strpos($type, "jpeg") || strpos($type, "jpg") || strpos($type, "png")) && ($size < 2000000)) {
+        if ((strpos($type, "jpeg") || strpos($type, "jpg") || strpos($type, "png"))) {
             $this->model->updateCellphone($id, $model, $price, $description, $id_brand, $image, $fileTemp);
         } else {
             $this->model->updateCellphone($id, $model, $price, $description, $id_brand);

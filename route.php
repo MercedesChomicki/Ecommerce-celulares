@@ -39,19 +39,19 @@ switch ($params[0]) {
     case 'vermas':
         $listController->showMore($params[1]);
         break;
-    case 'add':
+    case 'addCellphone':
         $listController->formInputControl();
         break;
-    case 'delete':
+    case 'deleteCellphone':
         $listController->deleteCellphone($params[1]);
         break;
-    case 'update':
+    case 'updateCellphone':
         $listController->updateCellphone($params[1]);
         break;
-    case 'confirmUpdate':
+    case 'confirmUpdateCellphone':
         $listController->formInputControl($params[1]);
-    case 'addCategory':
-        $brandController->addCategory();
+    case 'addBrand':
+        $brandController->addBrand();
         break;
     case 'deleteBrand':
         $brandController->deleteBrand($params[1]);

@@ -31,7 +31,7 @@ class BrandModel
         return $cellphones;
     }
 
-    function addCategory($name){
+    function addBrand($name){
         
         $query = $this->db->prepare("INSERT INTO marca (nombre) VALUES (?)");
         $query->execute([$name]);

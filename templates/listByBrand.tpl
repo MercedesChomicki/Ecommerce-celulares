@@ -1,11 +1,6 @@
 {include file="header.tpl"}
-{if $logged}
-    <ul class="indexHome">
-        <li><a href="#list">{$titulo|upper}</a></li>
-        <li><a href="#form">{$tituloForm|upper}</a></li>
-    </ul>
-{/if}
 <h1 id="list">{$titulo|upper}</h1>
+<a href="categorias" class="volver">Volver atras</a>
 <div class="container">
     <div class="container-cards">
         {foreach from=$cellphones item=$cellphone}
@@ -18,19 +13,13 @@
                     <p class="card-text">{$cellphone->descripcion|truncate:50}</p>
                     <a href="vermas/{$cellphone->id_celular}" class="btn btn-primary">Ver mas</a>
                     {if $logged}
-                        <a href="deleteCellphone/{$cellphone->id_celular}" type="button" class="btn btn-danger">Eliminar</a>
-                        <a href="updateCellphone/{$cellphone->id_celular}" type="button" class="btn btn-warning">Editar</a>
+                        <a href="delete/{$cellphone->id_celular}" type="button" class="btn btn-danger">Eliminar</a>
+                        <a href="update/{$cellphone->id_celular}" type="button" class="btn btn-warning">Editar</a>
                     {/if}
                 </div>
             </div>
 
         {/foreach}
     </div>
-    {if $logged}
-        <div>
-            <h1 id="form">{$tituloForm}</h1>
-            {include file="form_addCellphone.tpl"}
-        </div>
-    {/if}
 </div>
 {include file="footer.tpl"}

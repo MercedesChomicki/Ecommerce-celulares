@@ -28,8 +28,7 @@ class BrandView
         $this->smarty->assign('cellphones', $cellphones);
         $this->smarty->assign('logged', $logged);
         $this->smarty->assign('titulo', 'Lista de productos');
-        $this->smarty->assign('tituloForm', 'Agregar celular');
-        $this->smarty->display('templates/list.tpl');
+        $this->smarty->display('templates/listByBrand.tpl');
     }
 
     function formUpdateBrand($brand, $logged){
@@ -40,7 +39,7 @@ class BrandView
 
     function showErrorForm() {
         $this->smarty->assign('error', 'Formulario vacio');
-        $this->smarty->display('templates/error.tpl');
+        $this->smarty->display('templates/formError.tpl');
     }
 
 }
