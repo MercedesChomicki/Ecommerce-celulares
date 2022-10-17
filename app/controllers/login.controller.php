@@ -1,21 +1,25 @@
 <?php
 require_once './app/models/user.model.php';
 require_once './app/views/login.view.php';
+require_once './app/helpers/AuthHelper.php';
 
 class LoginController
 {
     private $view;
     private $model;
+    private $authHelper;
 
     public function __construct()
     {
         $this->model = new UserModel();
         $this->view = new LoginView();
+        $this->authHelper = new AuthHelper();
     }
 
     public function login()
     {
-        $this->view->showLogin();
+        $logged = $this->authHelper->isLogged();
+        $this->view->showLogin($logged);
     }
 
     public function verifyLogin()

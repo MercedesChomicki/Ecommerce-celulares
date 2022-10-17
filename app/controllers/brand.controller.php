@@ -18,18 +18,16 @@ class BrandController {
 
     public function showCategories()
     {  
-        $this->view->showCategories();
+        $logged = $this->authHelper->isLogged();
+        $this->view->showCategories($logged);
     }
 
-    public function showCellphonesByBrand($id_marca)
+    public function showCellphonesByBrand($id_marca = null)
     {
-        if (!isset($id_marca) || empty($id_marca)) {
-            $this->view->renderError();
-            return;
-        }
+        $logged = $this->authHelper->isLogged();
         $brand = $id_marca;
         $cellphones = $this->model->getCellphonesByBrand($brand);
-        $this->view->showCellphonesByBrand($cellphones);
+        $this->view->showCellphonesByBrand($cellphones, $logged);
     }
 
 

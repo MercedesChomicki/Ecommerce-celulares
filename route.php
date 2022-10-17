@@ -34,21 +34,13 @@ switch ($params[0]) {
         $brandController->showCategories();
         break;
     case 'categoriamodelos':
-        if (isset($params[1])) {
-            $brandController->showCellphonesByBrand($params[1]);
-        } else {
-            $brandController->showCellphonesByBrand(null);
-        }
+        $brandController->showCellphonesByBrand($params[1]);
         break;
     case 'vermas':
-        if (isset($params[1])) {
-            $listController->showMore($params[1]);
-        } else {
-            $listController->showMore(null);
-        }
+        $listController->showMore($params[1]);
         break;
     case 'add':
-        $listController->addCellphone();
+        $listController->formInputControl();
         break;
     case 'delete':
         $listController->deleteCellphone($params[1]);
@@ -57,7 +49,7 @@ switch ($params[0]) {
         $listController->updateCellphone($params[1]);
         break;
     case 'confirmUpdate':
-        $listController->confirmUpdateCellphone($params[1]);
+        $listController->formInputControl($params[1]);
     default:
         echo "404 not found";
         break;

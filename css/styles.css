@@ -166,3 +166,8 @@ h1 {
   /* background-color: rgb(194, 244, 100); */
   background-color: rgb(84, 84, 255);
 }
+
+.error{
+  margin: auto;
+  color: red;
+}

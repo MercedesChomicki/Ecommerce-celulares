@@ -10,20 +10,18 @@ class BrandView
         $this->smarty = new Smarty();
     }
 
-    function showCategories()
+    function showCategories($logged)
     {
+        $this->smarty->assign('logged', $logged);
         $this->smarty->display('templates/categories.tpl');
     }
 
-    function showCellphonesByBrand($cellphones)
+    function showCellphonesByBrand($cellphones, $logged)
     {
         $this->smarty->assign('cellphones', $cellphones);
+        $this->smarty->assign('logged', $logged);
         $this->smarty->assign('titulo', 'Lista de productos');
         $this->smarty->display('templates/listByBrand.tpl');
     }
 
-    function renderError()
-    {
-        echo "<h2>Error! Marca no especificada.</h2>";
-    }
 }

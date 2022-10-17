@@ -11,7 +11,7 @@
         <div class="col-3">
             <div class="form-group">
                 <label>Precio</label>
-                <input name="price" type="number" class="form-control" value="{$cellphone->precio}" required> 
+                <input name="price" type="number" class="form-control" value="{$cellphone->precio}" required>
             </div>
         </div>
 
@@ -24,6 +24,7 @@
             <div class="form-group">
                 <label>Marca</label>
                 <select name="id_marca" class="form-control" required>
+                    <option selected>Selecciona una Marca</option>
                     <option value="1">Samsung</option>
                     <option value="2">Apple</option>
                     <option value="3">Motorola</option>
@@ -36,7 +37,7 @@
         <div class="col-3">
             <div class="form-group">
                 <label>Imagen</label>
-                <input name="img" type="file" class="form-control" id="imageToUpload" />
+                <input name="img" type="file" class="form-control" id="imageToUpload" required/>
             </div>
         </div>
     </div>

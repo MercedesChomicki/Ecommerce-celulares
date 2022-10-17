@@ -9,12 +9,8 @@ class ListView
         $this->smarty = new Smarty();
     }
 
-    function showHomeLocation(){
+    function showHome(){ 
         header("Location: " . BASE_URL);
-    }
-
-    function showLoginLocation(){
-        header("Location: " . BASE_URL . 'login');
     }
 
     function showCellphones($cellphones, $logged)
@@ -26,23 +22,22 @@ class ListView
         $this->smarty->display('templates/list.tpl');
     }
 
-    function showMore($cellphone)
+    function showMore($cellphone, $logged)
     {
         $this->smarty->assign('cellphone', $cellphone);
+        $this->smarty->assign('logged', $logged);
         $this->smarty->display('templates/cellphone.tpl');
     }
 
-    function showForm() {
-        $this->smarty->display('templates/form_alta.tpl');
-    }
-
-    function formUpdateCellphone($cellphone){
+    function formUpdateCellphone($cellphone, $logged){
         $this->smarty->assign('cellphone', $cellphone);
+        $this->smarty->assign('logged', $logged);
         $this->smarty->display('templates/form_update.tpl');
     }
 
-    function renderError()
-    {
-        echo "<h2>Error! Marca no especificada.</h2>";
+    function showErrorForm() {
+        $this->smarty->assign('error', 'Formulario vacio');
+        $this->smarty->display('templates/error.tpl');
     }
+
 }

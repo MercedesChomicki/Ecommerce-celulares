@@ -13,7 +13,7 @@
         <div class="card {if $logged} bigCard {/if}">
                 <img src="{$cellphone->Imagen}" class="card-img-top rounded" alt="Celular modelo {$cellphone->modelo}">
                 <div class="card-body">
-                    <h5 class="card-title">{$cellphone->modelo}</h5>
+                    <h5 class="card-title">{$cellphone->modelo|truncate:40}</h5>
                     <b class="card-number">${$cellphone->precio}</b>
                     <p class="card-text">{$cellphone->descripcion|truncate:50}</p>
                     <a href="vermas/{$cellphone->id_celular}" class="btn btn-primary">Ver mas</a>

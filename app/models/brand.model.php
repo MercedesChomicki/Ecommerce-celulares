@@ -16,4 +16,5 @@ class BrandModel
         $cellphones = $query->fetchAll(PDO::FETCH_OBJ);
         return $cellphones;
     }
+
 }
