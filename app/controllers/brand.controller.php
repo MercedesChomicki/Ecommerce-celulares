@@ -1,9 +1,10 @@
-<?php 
+<?php
 require_once './app/models/brand.model.php';
 require_once './app/views/brand.view.php';
 require_once './app/helpers/AuthHelper.php';
 
-class BrandController {
+class BrandController
+{
 
     private $model;
     private $view;
@@ -16,13 +17,14 @@ class BrandController {
         $this->authHelper = new AuthHelper();
     }
 
-    public function showCategories()
-    {  
+    function showCategories()
+    {
         $logged = $this->authHelper->isLogged();
-        $this->view->showCategories($logged);
+        $brands = $this->model->getAllBrands();
+        $this->view->showCategories($brands, $logged);
     }
 
-    public function showCellphonesByBrand($id_marca = null)
+    function showCellphonesByBrand($id_marca = null)
     {
         $logged = $this->authHelper->isLogged();
         $brand = $id_marca;
@@ -30,5 +32,46 @@ class BrandController {
         $this->view->showCellphonesByBrand($cellphones, $logged);
     }
 
+    function addCategory()
+    {
+        $this->authHelper->checkLoggedIn();
 
+        if (isset($_POST['name']) && !empty($_POST['name'])) {
+            $name = $_POST['name'];
+
+            $this->model->addCategory($name);
+
+            $this->view->showCategoriesLocation();
+        } else {
+            $this->view->showErrorForm();
+        }
+    }
+
+    function deleteBrand($id_marca)
+    {
+        $this->authHelper->checkLoggedIn();
+        $this->model->deleteBrandById($id_marca);
+        $this->view->showCategoriesLocation();
+    }
+
+    public function updateBrand($id)
+    {
+
+        $logged = $this->authHelper->isLogged();
+        $brand = $this->model->getBrand($id);
+        $this->view->formUpdateBrand($brand, $logged);
+    }
+
+    function formInputControl($id)
+    {
+        $this->authHelper->checkLoggedIn();
+
+        if (!empty($_POST['name'])) {
+            $name = $_POST['name'];
+            $this->model->updateBrand($id, $name);
+            $this->view->showCategoriesLocation();
+        } else {
+            $this->view->showErrorForm();
+        }
+    }
 }

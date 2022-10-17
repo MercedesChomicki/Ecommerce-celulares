@@ -13,10 +13,11 @@ class ListView
         header("Location: " . BASE_URL);
     }
 
-    function showCellphones($cellphones, $logged)
+    function showCellphones($cellphones, $brands, $logged)
     {
         $this->smarty->assign('cellphones', $cellphones);
         $this->smarty->assign('logged', $logged);
+        $this->smarty->assign('brands', $brands);
         $this->smarty->assign('titulo', 'Lista de productos');
         $this->smarty->assign('tituloForm', 'Agregar celular');
         $this->smarty->display('templates/list.tpl');
@@ -29,9 +30,10 @@ class ListView
         $this->smarty->display('templates/cellphone.tpl');
     }
 
-    function formUpdateCellphone($cellphone, $logged){
+    function formUpdateCellphone($cellphone, $brands, $logged){
         $this->smarty->assign('cellphone', $cellphone);
         $this->smarty->assign('logged', $logged);
+        $this->smarty->assign('brands', $brands);
         $this->smarty->display('templates/form_update.tpl');
     }
 

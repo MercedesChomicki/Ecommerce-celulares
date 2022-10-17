@@ -23,21 +23,21 @@
         <div class="col-3">
             <div class="form-group">
                 <label>Marca</label>
-                <select name="id_marca" class="form-control" required>
+                <select name="id_marca" class="form-control">
+
                     <option selected>Selecciona una Marca</option>
-                    <option value="1">Samsung</option>
-                    <option value="2">Apple</option>
-                    <option value="3">Motorola</option>
-                    <option value="4">Xiaomi</option>
-                    <option value="5">LG</option>
-                    <option value="6">Huawei</option>
+
+                    {foreach $brands as $brand }
+                        <option value="{$brand->id_marca}">{$brand->nombre}</option>
+                    {/foreach}
+
                 </select>
             </div>
         </div>
         <div class="col-3">
             <div class="form-group">
                 <label>Imagen</label>
-                <input name="img" type="file" class="form-control" id="imageToUpload" required/>
+                <input name="img" type="file" class="form-control" id="imageToUpload" required />
             </div>
         </div>
     </div>

@@ -20,7 +20,8 @@ class ListController
     {
         $logged = $this->authHelper->isLogged();
         $cellphones = $this->model->getAllCellphones();
-        $this->view->showCellphones($cellphones, $logged);
+        $brands = $this->model->getAllBrands();
+        $this->view->showCellphones($cellphones, $brands, $logged);
     }
 
     public function showMore($id = null)
@@ -36,7 +37,8 @@ class ListController
         $logged = $this->authHelper->isLogged();
         $id_celular = $id;
         $cellphone = $this->model->getCellphone($id_celular);
-        $this->view->formUpdateCellphone($cellphone, $logged);
+        $brands = $this->model->getAllBrands();
+        $this->view->formUpdateCellphone($cellphone, $brands, $logged);
     }
 
     function formInputControl($id = null)
@@ -70,7 +72,6 @@ class ListController
 
     function addCellphone($type, $size, $model, $price, $description, $id_brand, $image, $fileTemp)
     {
-        //Se comprueba si el archivo a cargar es correcto observando su extensión y tamaño (200 kb como máximo.)
         if ((strpos($type, "jpeg") || strpos($type, "jpg") || strpos($type, "png")) && ($size < 2000000)) {
             $this->model->insertCellphone($model, $price, $description, $id_brand, $image, $fileTemp);
         } else {

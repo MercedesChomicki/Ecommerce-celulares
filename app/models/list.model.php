@@ -10,6 +10,14 @@ class ListModel
         $this->db = new PDO('mysql:host=localhost;' . 'dbname=db_celulares;charset=utf8', 'root', '');
     }
 
+    function getCellphone($id)
+    {
+        $query = $this->db->prepare('SELECT * FROM celular WHERE id_celular = ?');
+        $query->execute([$id]);
+        $cellphone = $query->fetch(PDO::FETCH_OBJ);
+        return $cellphone;
+    }
+
     public function getAllCellphones()
     {
         $query = $this->db->prepare("SELECT * FROM celular");
@@ -18,20 +26,11 @@ class ListModel
         return $cellphones;
     }
 
-    function getCellphonesByBrand($brand)
-    {
-        $query = $this->db->prepare('SELECT * FROM celular WHERE id_marca = ?');
-        $query->execute([$brand]);
-        $cellphones = $query->fetchAll(PDO::FETCH_OBJ);
-        return $cellphones;
-    }
-
-    function getCellphone($id)
-    {
-        $query = $this->db->prepare('SELECT * FROM celular WHERE id_celular = ?');
-        $query->execute([$id]);
-        $cellphone = $query->fetch(PDO::FETCH_OBJ);
-        return $cellphone;
+    function getAllBrands(){
+        $query = $this->db->prepare("SELECT * FROM marca");
+        $query->execute();
+        $brands = $query->fetchAll(PDO::FETCH_OBJ);
+        return $brands;
     }
 
     public function insertCellphone($model, $price, $description, $id_brand, $image=null, $fileTemp = null)

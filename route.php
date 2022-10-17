@@ -50,6 +50,18 @@ switch ($params[0]) {
         break;
     case 'confirmUpdate':
         $listController->formInputControl($params[1]);
+    case 'addCategory':
+        $brandController->addCategory();
+        break;
+    case 'deleteBrand':
+        $brandController->deleteBrand($params[1]);
+        break;
+    case 'updateBrand':
+        $brandController->updateBrand($params[1]);
+        break;
+    case 'confirmUpdateBrand':
+        $brandController->formInputControl($params[1]);
+        break;
     default:
         echo "404 not found";
         break;
